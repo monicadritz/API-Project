@@ -1,0 +1,30 @@
+#hello{
+    padding-top: 75px;
+}
+
+#hello .glyphicon-piggy-bank{
+ float: right;
+}
+
+/*Figure Below Pictures*/
+#figure{
+    color: #757575;
+    font-style: italic;
+}
+
+#bottomPadding{
+    padding-bottom: 50px;
+}
+
+/*Forms*/
+.panel-heading{
+    background:#3498DB;
+    color:#FFF;
+}
+.panel-heading .glyphicon-user{
+    float: right;
+}
+.panel-blue{
+    border-color:#3498DB;
+    border-width:1px;
+}

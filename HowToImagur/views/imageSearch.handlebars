@@ -1,0 +1,50 @@
+<div class="Jumbo">
+        <div class="container">
+    
+            <h1>Lets get started with searching an image</h1>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2> How are we searching for an image? </h2>
+            <p>We are going to use an image ID to search for an image. Every image has an image ID that is specific to that image in the database. We will be using this to search for an image on Imgur. To be able to search we need to write some code in Javascript.
+ <pre>
+                <code>
+         function getPictureById()
+         {
+            
+            var req=new XMLHttpRequest();
+            req.onreadystatechange = function()
+            {
+            if (req.readyState == 4 && req.status == 200) 
+                {
+                var dummy = req.responseText;
+                console.log(JSON.parse(dummy));
+                var respObj = JSON.parse(dummy);
+                alert(respObj.data.link);
+
+                }
+            };  
+            
+            var method = "GET";
+            var apiURL = 'https://api.imgur.com/3/image/';
+            var imageId = 'gkan5Vb';
+            
+            var authHeader = 'Authorization';
+            var authID = 'Client-ID <Your_ID>';
+            
+            req.open(method, apiURL + imageId);
+            req.setRequestHeader(authHeader, authID);
+            req.send();
+
+            }
+            </code>
+            </pre>
+            </p>             
+        </div>
+       
+    </div>
+</div>
+
